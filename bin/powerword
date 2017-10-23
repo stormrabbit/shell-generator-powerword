@@ -1,0 +1,32 @@
+#!/usr/bin/env node --harmony
+
+'use strict'
+
+// 1 定义脚手架路径
+process.env.NODE_PATH = __dirname + '/../node_modules/'
+const program = require('commander')
+
+// 2 定义版本
+program
+  .version(require('../package').version)
+
+// 3 定义使用方法
+program
+  .usage('<command>')
+
+// 4 定义具体方法
+program
+  .command('init')
+  .description('Generate a new project')
+  .alias('i')
+  .action(() => {
+    require('../command/init')()
+  })
+
+// 5 处理参数
+program.parse(process.argv)
+
+// 6 退出
+if (!program.args.length) {
+  program.help()
+}

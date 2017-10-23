@@ -1,0 +1,25 @@
+{
+  "name": "spell-book",
+  "version": "1.0.0",
+  "description": "a spell-book for young finger-wizards! Name your own powerword,and store your spell! ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "cli-tools",
+    "powerword"
+  ],
+  "author": "leanhardt",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0"
+  },
+  "bin":{
+    "powerword":"bin/powerword" 
+  }
+}
