@@ -1,6 +1,6 @@
 {
   "name": "spell-book",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a spell-book for young finger-wizards! Name your own powerword,and store your spell! ",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0"
   },
-  "bin":{
-    "powerword":"bin/powerword" 
+  "bin": {
+    "spell": "bin/spell"
   }
 }

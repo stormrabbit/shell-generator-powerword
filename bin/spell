@@ -1,5 +1,4 @@
 #!/usr/bin/env node --harmony
-
 'use strict'
 
 // 1 定义脚手架路径
@@ -14,17 +13,35 @@ program
 program
   .usage('<command>')
 
+/**
+ * 这是一个标志位，勿删
+ */
 // 4 定义具体方法
 program
-  .command('init')
-  .description('Generate a new project')
-  .alias('i')
+  .command('aog')
+  .description('aog')
+  .alias('a')
   .action(() => {
-    require('../command/init')()
+    require('../command/aog')()
+  })
+
+program
+  .command('scribe')
+  .description('Add one new command code to spell ^^y')
+  .alias('ss')
+  .action(() => {
+    require('../command/scribe')()
   })
 
 // 5 处理参数
 program.parse(process.argv)
+
+// 5+ 异常处理
+process.on('unhandledRejection', function (err) {
+  console.error(err.stack);
+});
+
+process.on(`uncaughtException`, console.error);
 
 // 6 退出
 if (!program.args.length) {
