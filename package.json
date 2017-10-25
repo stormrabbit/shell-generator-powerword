@@ -1,6 +1,6 @@
 {
   "name": "spell-book",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a spell-book for young finger-wizards! Name your own powerword,and store your spell! ",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,9 @@
     "chalk": "^1.1.3",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^2.9.0"
-  },
+    "commander": "^2.9.0",
+    "spell-fs" : "^1.0.2"
+  },  
   "bin": {
     "spell": "bin/spell"
   }

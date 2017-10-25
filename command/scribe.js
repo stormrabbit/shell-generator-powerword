@@ -3,7 +3,7 @@ const co = require('co')
 const prompt = require('co-prompt')
 const chalk = require('chalk')
 const exec = require('child_process').exec
-const { insertFileP, writeFileP } = require('../utils/fsPromise')
+const { insertFileP, writeFileP } = require('spell-fs')
 const {buildActionCode, buildCommandCode} = require('../templates/scribeScroll');
 module.exports = () => {
   co(function* () {
@@ -25,13 +25,13 @@ module.exports = () => {
      * 2 把 wordObj 的值根据模板插入到 powerword 文件中
      */
 
-    yield insertFileP('../bin/spell', buildCommandCode(spellObj), '定义具体方法');
+    yield insertFileP(__dirname + '/../bin/spell', buildCommandCode(spellObj), '定义具体方法');
 
     /**
      * 3 根据输入的 command 创建/重写文件 
      */
 
-    yield writeFileP(`../command/${spellObj.command}.js`, buildActionCode());
+    yield writeFileP(__dirname +`/../command/${spellObj.command}.js`, buildActionCode());
 
     // 做完了就退出
     process.exit()

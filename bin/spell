@@ -17,13 +17,6 @@ program
  * 这是一个标志位，勿删
  */
 // 4 定义具体方法
-program
-  .command('aog')
-  .description('aog')
-  .alias('a')
-  .action(() => {
-    require('../command/aog')()
-  })
 
 program
   .command('scribe')
