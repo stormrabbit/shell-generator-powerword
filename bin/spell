@@ -17,6 +17,13 @@ program
  * 这是一个标志位，勿删
  */
 // 4 定义具体方法
+program
+  .command('test1')
+  .description('t')
+  .alias('tt')
+  .action(() => {
+    require('../command/test1')()
+  })
 
 program
   .command('scribe')
