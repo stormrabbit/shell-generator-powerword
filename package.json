@@ -1,7 +1,7 @@
 {
   "name": "spell-book",
-  "version": "1.0.2",
-  "description": "a spell-book for young finger-wizards! Name your own powerword,and store your spell! ",
+  "version": "1.0.3",
+  "description": "Name your own powerword,and store your spell! ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,8 +18,8 @@
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0",
-    "spell-fs" : "^1.0.2"
-  },  
+    "eschew-materials": "^1.0.1"
+  },
   "bin": {
     "spell": "bin/spell"
   }

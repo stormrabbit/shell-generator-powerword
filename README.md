@@ -1,4 +1,4 @@
-# spell-book-powerword 
+# spell-book-powerword 律令
 
 ##### 有关名字的由来
 
@@ -12,15 +12,11 @@
 
 中二病没救了。
 
-## 说明
+- 现有律令
 
-- 希望达成目标
-
-1. 使用命令行自动生成固定格式的代码文件
-2. 可以通过读取模板，生成不同的文件
-
-- `spell` 列出所有命令
-- `scribe` 在 bin/spell 中添加新的 command 代码，在 command/ 目录下生成对应的 js 文件 
+- `spell [-h]` 列出所有命令
+- `spell ss || scribe [cmdName] [-a]` 在 bin/spell 中添加新的 command 代码，在 command/ 目录下生成对应的 js 文件。 ~~抄写卷轴~~
+> 不写 cmdName 会提示输入；使用 -a 表示自己定制 command 的描述、缩写以及 action 文件名
 
 #### Change Log: ####
 
@@ -38,6 +34,12 @@
 
 - 1.0.2
 1. 把 fsPormise 发布到 npm 上，更名为 spell-fs。
+
+- 1.0.3
+1. 将 fsPromise 以及其他一些公共组件整合到一起，命名为 eschew-materials ，发布至 npm。
+2. 为 scribe 命令增加 argument 与 options 项，可以更灵活的生成不同类型的 command 命令。
+3. 增加容错处理，防止 spell ss scribe 覆盖原有代码；增加生成提示。
+
 #### 关键词：
 `-cli`
 `co`
