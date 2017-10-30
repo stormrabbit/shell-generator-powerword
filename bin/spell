@@ -23,6 +23,16 @@ program
  // 4 定义具体方法
 
 program
+  .command('component [componentName]')
+  .description('command 命令 component')
+  .alias('co')
+  // .option('-e --example', '在这里可以添加 component 的 options')
+  .action((componentName, options) => {
+    require('../command/component')(componentName, options)
+})
+
+
+program
   .command('scribe [cmdName]')
   .description('为 spell 添加新的 command ')
   .alias('ss')
